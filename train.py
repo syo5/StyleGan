@@ -18,7 +18,7 @@ from metrics import metric_base
 
 
 local = "C:\\Users\\SS\\iCloudDrive\\GAN\\StyleGan\\datasets"
-colab = "./gdrive/My Drive/Colab Notebooks"
+colab = "gdrive/My Drive/StyleGan/datasets"
 data_dir = colab
 
 
