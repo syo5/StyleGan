@@ -15,6 +15,14 @@ import config
 from metrics import metric_base
 
 #----------------------------------------------------------------------------
+
+
+local = "C:\\Users\\SS\\iCloudDrive\\GAN\\StyleGan\\datasets"
+colab = "./gdrive/My Drive/Colab Notebooks"
+data_dir = colab
+
+
+#----------------------------------------------------------------------------
 # Official training configs for StyleGAN, targeted mainly for FFHQ.
 if 1:
     desc          = 'sgan'                                                                 # Description string included in result subdir name.
@@ -33,7 +41,9 @@ if 1:
     tf_config     = {'rnd.np_random_seed': 1000}                                           # Options for tflib.init_tf().
 
     # Dataset.
-    desc += '-datasets';     dataset = EasyDict(tfrecord_dir='C:\\Users\\SS\\iCloudDrive\\GAN\\StyleGan\\datasets',resolution=128); train.mirror_augment = False
+
+
+    desc += '-datasets';     dataset = EasyDict(tfrecord_dir = data_dir,resolution=128); train.mirror_augment = False
     #desc += '-ffhq';     dataset = EasyDict(tfrecord_dir='ffhq');                 train.mirror_augment = True
     #desc += '-ffhq512';  dataset = EasyDict(tfrecord_dir='ffhq', resolution=512); train.mirror_augment = True
     #desc += '-ffhq256';  dataset = EasyDict(tfrecord_dir='ffhq', resolution=256); train.mirror_augment = True
